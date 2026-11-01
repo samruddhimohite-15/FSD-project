@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Item - Reuse Campus</title>
+</head>
+<body>
+    <header>
+        <h1>Add an Item</h1>
+        <p>List a book, notes, or another useful item.</p>
+    </header>
+
+    <main class="form-box">
+        <form method="post">
+            <label>Your name</label>
+            <input type="text" name="student_name" required>
+
+            <label>Item name</label>
+            <input type="text" name="item_name" required>
+
+            <label>Category</label>
+            <select name="category">
+                <option>Books</option>
+                <option>Notes</option>
+                <option>Stationery</option>
+                <option>Other</option>
+            </select>
+
+            <label>Description</label>
+            <textarea name="description" rows="4" placeholder="Write a short description"></textarea>
+
+            <button type="submit">Save Item</button>
+            <a class="back-link" href="{{ url_for('home') }}">Back to Home</a>
+        </form>
+    </main>
+</body>
+</html>
